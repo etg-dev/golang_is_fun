@@ -6,7 +6,8 @@ else and switch** control structures. Both control structures can be found in mo
 modern programming languages, so if you have already programmed in another
 programming language,
 
-Certainly! In Go, conditionals are expressed primarily through `if` statements and the `switch` statement. Here's a comprehensive guide on conditions in Go:
+Certainly! In Go, conditionals are expressed primarily through `if` statements and the `switch` statement. Here's a
+comprehensive guide on conditions in Go:
 
 ### `if` Statements:
 
@@ -14,9 +15,9 @@ The basic syntax of an `if` statement in Go is as follows:
 
 ```go
 if condition {
-    // code to be executed if the condition is true
+// code to be executed if the condition is true
 } else {
-    // code to be executed if the condition is false
+// code to be executed if the condition is false
 }
 ```
 
@@ -24,7 +25,7 @@ You can also have an `if` statement without an else block:
 
 ```go
 if condition {
-    // code to be executed if the condition is true
+// code to be executed if the condition is true
 }
 ```
 
@@ -36,29 +37,30 @@ package main
 import "fmt"
 
 func main() {
-    x := 10
+	x := 10
 
-    if x > 5 {
-        fmt.Println("x is greater than 5")
-    } else {
-        fmt.Println("x is not greater than 5")
-    }
+	if x > 5 {
+		fmt.Println("x is greater than 5")
+	} else {
+		fmt.Println("x is not greater than 5")
+	}
 }
 ```
 
 ### `switch` Statement:
 
-The `switch` statement in Go is more flexible than in some other languages. It can be used with different types, not just constants. Here's the basic syntax:
+The `switch` statement in Go is more flexible than in some other languages. It can be used with different types, not
+just constants. Here's the basic syntax:
 
 ```go
 switch expression {
 case value1:
-    // code to be executed if expression == value1
+// code to be executed if expression == value1
 case value2:
-    // code to be executed if expression == value2
+// code to be executed if expression == value2
 // more cases...
 default:
-    // code to be executed if none of the cases match
+// code to be executed if none of the cases match
 }
 ```
 
@@ -70,20 +72,20 @@ package main
 import "fmt"
 
 func main() {
-    day := "Monday"
+	day := "Monday"
 
-    switch day {
-    case "Monday":
-        fmt.Println("It's the start of the week.")
-    case "Friday":
-        fmt.Println("It's almost the weekend!")
-    default:
-        fmt.Println("It's a regular day.")
-    }
+	switch day {
+	case "Monday":
+		fmt.Println("It's the start of the week.")
+	case "Friday":
+		fmt.Println("It's almost the weekend!")
+	default:
+		fmt.Println("It's a regular day.")
+	}
 }
 ```
 
-In Go, a `switch` statement can also be used without an expression, which is equivalent to `switch true`. 
+In Go, a `switch` statement can also be used without an expression, which is equivalent to `switch true`.
 This allows you to express complex conditions in each case:
 
 ```go
@@ -92,16 +94,16 @@ package main
 import "fmt"
 
 func main() {
-    age := 25
+	age := 25
 
-    switch {
-    case age < 18:
-        fmt.Println("You are a minor.")
-    case age >= 18 && age < 65:
-        fmt.Println("You are an adult.")
-    default:
-        fmt.Println("You are a senior.")
-    }
+	switch {
+	case age < 18:
+		fmt.Println("You are a minor.")
+	case age >= 18 && age < 65:
+		fmt.Println("You are an adult.")
+	default:
+		fmt.Println("You are a senior.")
+	}
 }
 ```
 
@@ -113,30 +115,33 @@ package main
 import "fmt"
 
 func main() {
-    day := "Wednesday"
+	day := "Wednesday"
 
-    switch day {
-    case "Monday":
-        fmt.Println("It's the start of the week.")
-    case "Tuesday":
-        fmt.Println("It's the second day of the week.")
-    case "Wednesday":
-        fmt.Println("It's the middle of the week.")
-    case "Thursday":
-        fmt.Println("It's almost the weekend!")
-    case "Friday":
-        fmt.Println("It's the end of the workweek.")
-    case "Saturday", "Sunday":
-        fmt.Println("It's the weekend!")
-    default:
-        fmt.Println("It's an unknown day.")
-    }
+	switch day {
+	case "Monday":
+		fmt.Println("It's the start of the week.")
+	case "Tuesday":
+		fmt.Println("It's the second day of the week.")
+	case "Wednesday":
+		fmt.Println("It's the middle of the week.")
+	case "Thursday":
+		fmt.Println("It's almost the weekend!")
+	case "Friday":
+		fmt.Println("It's the end of the workweek.")
+	case "Saturday", "Sunday":
+		fmt.Println("It's the weekend!")
+	default:
+		fmt.Println("It's an unknown day.")
+	}
 }
 ```
 
-In this example, the `switch` statement is used to check the value of the `day` variable. Each case corresponds to a specific day of the week. If the value of `day` matches any of the cases, the corresponding message is printed. If there is no match, the `default` case is executed.
+In this example, the `switch` statement is used to check the value of the `day` variable. Each case corresponds to a
+specific day of the week. If the value of `day` matches any of the cases, the corresponding message is printed. If there
+is no match, the `default` case is executed.
 
-Note that you can also use multiple values in a single case, as shown with "Saturday" and "Sunday" sharing the same case.
+Note that you can also use multiple values in a single case, as shown with "Saturday" and "Sunday" sharing the same
+case.
 
 Understanding how to use `if` and `switch` statements effectively is fundamental for writing clear and concise Go code.
 
@@ -145,12 +150,14 @@ almost everywhere. This pattern says that if the value of an error variable as
 returned from a function is nil, then everything is OK with the function execution.
 Otherwise, there is an error condition somewhere that needs special care. This
 pattern is usually implemented as follows:
+
 ```go
 err := anyFunctionCall()
 if err != nil {
 // Do something if there is an error
 }
 ```
+
 err is the variable that holds the error value as returned from a function and !=
 means that the value of the err variable is not nil. You will see similar code multiple
 times in Go programs.
@@ -177,14 +184,15 @@ package main
 import "fmt"
 
 func main() {
-    // Simple for loop
-    for i := 0; i < 5; i++ {
-        fmt.Println(i)
-    }
+	// Simple for loop
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
 }
 ```
 
-In this example, the loop initializes `i` to 0, continues as long as `i` is less than 5, and increments `i` in each iteration.
+In this example, the loop initializes `i` to 0, continues as long as `i` is less than 5, and increments `i` in each
+iteration.
 
 #### Infinite Loop:
 
@@ -194,12 +202,12 @@ package main
 import "fmt"
 
 func main() {
-    // Infinite loop
-    for {
-        fmt.Println("This is an infinite loop.")
-        // To break out of the loop, use a break statement
-        break
-    }
+	// Infinite loop
+	for {
+		fmt.Println("This is an infinite loop.")
+		// To break out of the loop, use a break statement
+		break
+	}
 }
 ```
 
@@ -215,17 +223,17 @@ package main
 import "fmt"
 
 func main() {
-    // Iterating over an array
-    numbers := [3]int{1, 2, 3}
-    for index, value := range numbers {
-        fmt.Printf("Index: %d, Value: %d\n", index, value)
-    }
+	// Iterating over an array
+	numbers := [3]int{1, 2, 3}
+	for index, value := range numbers {
+		fmt.Printf("Index: %d, Value: %d\n", index, value)
+	}
 
-    // Iterating over a slice
-    fruits := []string{"apple", "banana", "cherry"}
-    for index, value := range fruits {
-        fmt.Printf("Index: %d, Value: %s\n", index, value)
-    }
+	// Iterating over a slice
+	fruits := []string{"apple", "banana", "cherry"}
+	for index, value := range fruits {
+		fmt.Printf("Index: %d, Value: %s\n", index, value)
+	}
 }
 ```
 
@@ -237,16 +245,16 @@ package main
 import "fmt"
 
 func main() {
-    // Iterating over a map
-    colors := map[string]string{
-        "red":    "#FF0000",
-        "green":  "#00FF00",
-        "blue":   "#0000FF",
-    }
+	// Iterating over a map
+	colors := map[string]string{
+		"red":   "#FF0000",
+		"green": "#00FF00",
+		"blue":  "#0000FF",
+	}
 
-    for key, value := range colors {
-        fmt.Printf("Key: %s, Value: %s\n", key, value)
-    }
+	for key, value := range colors {
+		fmt.Printf("Key: %s, Value: %s\n", key, value)
+	}
 }
 ```
 
@@ -258,17 +266,18 @@ package main
 import "fmt"
 
 func main() {
-    // Iterating over a string
-    message := "Hello, Go!"
-    for index, char := range message {
-        fmt.Printf("Index: %d, Character: %c\n", index, char)
-    }
+	// Iterating over a string
+	message := "Hello, Go!"
+	for index, char := range message {
+		fmt.Printf("Index: %d, Character: %c\n", index, char)
+	}
 }
 ```
 
 ### `goto` Statement:
 
-The `goto` statement in Go is available but is not recommended for regular use because it can make code less readable and harder to maintain. It is used to transfer control to a labeled statement.
+The `goto` statement in Go is available but is not recommended for regular use because it can make code less readable
+and harder to maintain. It is used to transfer control to a labeled statement.
 
 #### Example:
 
@@ -278,20 +287,113 @@ package main
 import "fmt"
 
 func main() {
-    i := 0
+	i := 0
 
 loop:
-    fmt.Println(i)
-    i++
+	fmt.Println(i)
+	i++
 
-    if i < 5 {
-        goto loop
-    }
+	if i < 5 {
+		goto loop
+	}
 }
 ```
 
-In this example, the `goto` statement is used to create a labeled loop. However, it's crucial to note that using `goto` can lead to less maintainable and less readable code, and it's generally considered a best practice to use `for` loops and `range` instead.
+In this example, the `goto` statement is used to create a labeled loop. However, it's crucial to note that using `goto`
+can lead to less maintainable and less readable code, and it's generally considered a best practice to use `for` loops
+and `range` instead.
 
-While `goto` can be useful in certain situations, it's essential to be cautious and use it sparingly to avoid introducing unnecessary complexity to your code.
+While `goto` can be useful in certain situations, it's essential to be cautious and use it sparingly to avoid
+introducing unnecessary complexity to your code.
 
 Remember, in most cases, `for` loops and `range` provide cleaner and more readable alternatives for iteration in Go.
+
+### Functions
+
+### 1. **Function Declaration:**
+
+- Functions are declared using the `func` keyword.
+- The basic syntax is: `func functionName(parameters) returnType { ... }`.
+
+   ```go
+   package main
+
+   import "fmt"
+
+   // Function without parameters and return type
+   func greet() {
+       fmt.Println("Hello, Gopher!")
+   }
+
+   // Function with parameters and return type
+   func add(a, b int) int {
+       return a + b
+   }
+
+   // Function with named return values
+   func divide(dividend, divisor float64) (result float64, err error) {
+       if divisor == 0 {
+           err = fmt.Errorf("cannot divide by zero")
+           return
+       }
+       result = dividend / divisor
+       return
+   }
+
+   func main() {
+       greet()
+       sum := add(3, 4)
+       fmt.Println("Sum:", sum)
+
+       result, err := divide(10, 2)
+       if err != nil {
+           fmt.Println("Error:", err)
+       } else {
+           fmt.Println("Division Result:", result)
+       }
+   }
+   ```
+
+### 2. **Variadic Functions:**
+
+- Functions can accept a variable number of arguments using the ellipsis (`...`) syntax.
+- The variadic parameter should be the last one.
+
+```go
+   func sum(numbers ...int) int {
+total := 0
+for _, num := range numbers {
+total += num
+}
+return total
+}
+
+// Usage:
+total := sum(1, 2, 3, 4, 5)
+```
+
+### 3. **Anonymous Functions and Closures:**
+
+- Anonymous functions can be declared inline.
+- Closures can capture and manipulate variables from the surrounding scope.
+
+```go
+   func main() {
+// Anonymous function
+add := func (a, b int) int {
+return a + b
+}
+
+result := add(2, 3)
+fmt.Println("Result:", result)
+
+// Closure
+x := 10
+increment := func () int {
+x++
+return x
+}
+
+fmt.Println(increment()) // Output: 11
+fmt.Println(increment()) // Output: 
+  ```
